@@ -40,4 +40,9 @@ public class GreetingController {
         return application.getInstances();
     }
 
+    // This method should only be accessed by users with role of 'admin'
+    @GetMapping("/admin")
+    public String homeAdmin() {
+        return "This is the admin area";
+    }
 }
